@@ -182,11 +182,11 @@
                       </div>
                       <div class="d-flex flex-column justify-content-center">
                         <h6 class="text-sm font-weight-normal mb-1">
-                          <span class="font-weight-bold">New message</span> from Laur
+                          <span class="font-weight-bold"> {sql | post "uptime_local" -i [date, time, sha256-checksum }</span> {sql | post "uptime_local" -s}
                         </h6>
                         <p class="text-xs text-secondary mb-0">
                           <i class="fa fa-clock me-1"></i>
-                          13 minutes ago
+                          {sql | post "uptime_time - i(in range, lasttime - last_time)"
                         </p>
                       </div>
                     </div>
